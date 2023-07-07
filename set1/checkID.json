@@ -5,19 +5,19 @@
     ],
     "machine": "x86_64",
     "os_name": "posix",
-    "platform": "Linux-5.15.0-1040-azure-x86_64-with-glibc2.31",
+    "platform": "Linux-5.15.0-1039-azure-x86_64-with-glibc2.31",
     "processor": "x86_64",
-    "release": "5.15.0-1040-azure",
+    "release": "5.15.0-1039-azure",
     "system": "Linux",
     "uname": [
         "Linux",
         "codespaces-27d197",
-        "5.15.0-1040-azure",
-        "#47-Ubuntu SMP Thu Jun 1 19:38:24 UTC 2023",
+        "5.15.0-1039-azure",
+        "#46-Ubuntu SMP Mon May 22 15:18:07 UTC 2023",
         "x86_64",
         "x86_64"
     ],
-    "version": "#47-Ubuntu SMP Thu Jun 1 19:38:24 UTC 2023",
+    "version": "#46-Ubuntu SMP Mon May 22 15:18:07 UTC 2023",
     "python_build": [
         "main",
         "Jun  7 2023 23:51:49"
