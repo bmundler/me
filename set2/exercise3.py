@@ -46,15 +46,12 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    if (moves==True and should_move==True) or (moves==False and should_move==False):
-        return ("No Problem")
-
     if moves==True and should_move==False:
         return ("WD-40")
-
-    if moves==False and should_move==True:
+    elif moves==False and should_move==True:
         return ("Duct Tape")
-
+    else:
+        return ("No Problem")
 
 
 def loops_preview():
@@ -66,7 +63,7 @@ def loops_preview():
     """
     choc_list = []
     for i in range(8):
-        choc_list.append("💩")
+        choc_list.append("💩 " + str(i))
     return choc_list
 
 
