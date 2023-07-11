@@ -47,9 +47,9 @@ def fix_it(moves=True, should_move=True):
     As an extra challenge, see if you can get that down to three.
     """
     if moves==True and should_move==False:
-        return ("WD-40")
-    elif moves==False and should_move==True:
         return ("Duct Tape")
+    elif moves==False and should_move==True:
+        return ("WD-40")
     else:
         return ("No Problem")
 
@@ -74,8 +74,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
-
+    star_list = []
+    for i in range(8):
+        star_list.append("*" + str(i))
+    return star_list
 
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
@@ -87,7 +89,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    another_list = []
+    for i in range(number_of_items):
+        another_list.append(symbol)
+    return another_list
 
 
 def loops_2_preview():
@@ -106,7 +111,7 @@ def loops_2_preview():
     for i in range(4):
         row = []
         for j in range(4):
-            row.append("💩")
+            row.append("*")
         field.append(row)
     return field
 
@@ -129,7 +134,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    another_field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append("*")
+        another_field.append(row)
+    return another_field
 
 
 def loops_3():
@@ -153,7 +164,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    another_sequence = []    
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(str(i))
+        another_sequence.append(row)
+    return another_sequence
 
 
 def loops_4():
@@ -173,7 +190,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    one_more_sequence = []    
+    for i in range(10):
+        row = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        for j in range(10):
+            row.append(row)
+        one_more_sequence.append(i)
+    return one_more_sequence
 
 
 def loops_5():
