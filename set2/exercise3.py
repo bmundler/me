@@ -226,7 +226,21 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    # rows = 10
+    # cols = 5
+    # coord_list = []
+    # for i in range(rows):
+    #         for j in range (cols):
+    #             coord_list.append('(i' + str(i) + ', j' + str(j) + ')')
+    #         print(coord_list)
+
+    another_sequence = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append(f"(i{i}, j{j})")
+        another_sequence.append(row)
+    return another_sequence
 
 
 def loops_6():
