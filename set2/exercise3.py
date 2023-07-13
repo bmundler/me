@@ -26,11 +26,6 @@ def is_odd(a_number):
         return True
 
 
-
-
-
-
-
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
 
@@ -46,12 +41,14 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    if moves==True and should_move==False:
-        return ("Duct Tape")
-    elif moves==False and should_move==True:
-        return ("WD-40")
+    if moves == should_move:
+        return "No Problem"
+    elif moves == False and should_move == True:
+        return "WD-40"
+    elif moves == True and should_move == False:
+        return "Duct Tape"
     else:
-        return ("No Problem")
+        print("not good")
 
 
 def loops_preview():
@@ -75,9 +72,10 @@ def loops_1a():
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
     star_list = []
-    for i in range(8):
-        star_list.append("*" + str(i))
+    for i in range(10):
+        star_list.append("*")
     return star_list
+
 
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
@@ -111,7 +109,7 @@ def loops_2_preview():
     for i in range(4):
         row = []
         for j in range(4):
-            row.append("*")
+            row.append("💩")
         field.append(row)
     return field
 
@@ -164,7 +162,7 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    another_sequence = []    
+    another_sequence = []
     for i in range(10):
         row = []
         for j in range(10):
@@ -190,13 +188,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    one_more_sequence = []    
+    another_sequence = []
     for i in range(10):
-        row = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        row = []
         for j in range(10):
-            row.append(row)
-        one_more_sequence.append(i)
-    return one_more_sequence
+            row.append(str(j))
+        another_sequence.append(row)
+    return another_sequence
 
 
 def loops_5():
