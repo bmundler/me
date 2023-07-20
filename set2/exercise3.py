@@ -261,7 +261,11 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    wedge = []
+    for i in range(10):
+        row = [str(j) for j in range(i + 1)]
+        wedge.append(row)
+    return wedge
 
 
 def loops_7():
@@ -285,7 +289,14 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+
+    pyramid = []
+    for i in range(5):
+        spaces = [" "] * (5 - i - 1)
+        stars = ["*"] * (2 * i + 1)
+        row = spaces + stars + spaces
+        pyramid.append(row)
+    return pyramid
 
 
 if __name__ == "__main__":
