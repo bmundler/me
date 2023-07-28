@@ -18,9 +18,26 @@ def loop_ranger(start, stop=None, step=1):
     with just the range function, but we'd like you to do it the long way.
     """
 
-    while True:
-        for x in range(loop_ranger)
-    return None
+    i = start
+    num_list = []
+    while i in range(start, stop, step):
+        num_list.append(str(i))
+        i = i + step
+        if i == stop:
+            break
+    return num_list
+
+    # startx = 100
+    # stopx = 104
+    # stepx = 2
+    # i = startx
+    # num_list = []
+    # while i in range(startx, stopx, stepx):
+    #     num_list.append(str(i))
+    #     i = i + stepx
+    #     if i == stopx:
+    #         break
+    # return num_list
 
 
 def two_step_ranger(start, stop):
@@ -31,7 +48,6 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
 
 
 def stubborn_asker(low, high):
@@ -52,12 +68,12 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    while True:
-        try:
-                result = input(message)
-                return int(result)
-        except ValueError as val_err:
-            print("not a number, try again.", val_err)
+    # while True:
+    #     try:
+    #         result = input(message)
+    #         return int(result)
+    #     except ValueError as val_err:
+    #         print("not a number, try again.", val_err)
 
 
 def super_asker(low, high):
