@@ -17,6 +17,9 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
+
+    while True:
+        for x in range(loop_ranger)
     return None
 
 
@@ -49,7 +52,12 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        try:
+                result = input(message)
+                return int(result)
+        except ValueError as val_err:
+            print("not a number, try again.", val_err)
 
 
 def super_asker(low, high):

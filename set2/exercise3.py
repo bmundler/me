@@ -19,6 +19,11 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
+
+    # YOU CAN ALSO DO:
+    # value = a_number % 2
+    # return value == 1
+
     odd_or_even = a_number % 2
     if odd_or_even == 0:
         return False
