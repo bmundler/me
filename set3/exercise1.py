@@ -57,12 +57,16 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    # while True:
-    #     try:
-    #         result low / high
-    #         return int(result)
-    #     except ValueError as val_err:
-    #         print("not a number, try again.", val_err)
+
+    while True:
+        message = "Enter a number: "
+        try:
+            result = input(message)
+            if (int(result) > low) and (int(result) < high):
+                print('Nice, keep going.')
+                break
+        except ValueError:
+            print("That's a letter, duh")
 
 
 def not_number_rejector(message):
@@ -71,13 +75,13 @@ def not_number_rejector(message):
     Ask for a number, and if the response is actually NOT a number
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
-    """
+    # """
     while True:
         try:
             result = input(message)
             return int(result)
         except ValueError as val_err:
-            print("not a number, try again.", val_err)
+            print("Not a number, try again.", val_err)
 
 
 def super_asker(low, high):
@@ -86,7 +90,15 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    while True:
+        message = "Now enter another number between " + str(low) + " and " + str(high) + ": "
+        try:
+            result = input(message)
+            if (int(result) > low) and (int(result) < high):
+                print('Well done, amigo.')
+                break
+        except ValueError:
+            print("...a NUMBER, like 123")
 
 
 if __name__ == "__main__":
