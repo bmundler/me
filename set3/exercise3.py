@@ -32,19 +32,21 @@ def advancedGuessingGame():
 
     while True:
         try:
-            lowerBound = input("Enter a lower bound: ")
-            if int(lowerBound):
-                break
+            lowerBound = int(input("Enter a lower bound: "))
+            break
         except ValueError:
             print("Not a number, try again.")
 
     while True:
         try:
-            upperBound = input("Now enter a number higher than " + (lowerBound) + ": ")
-            if upperBound < lowerBound:
+            upperBound = int(
+                input("Now enter a number higher than " + str(lowerBound) + ": ")
+            )
+            if upperBound <= lowerBound:
                 print("Too low")
-            elif int(upperBound):
+            else:
                 break
+
         except ValueError:
             print("Not a number, try again.")
 
