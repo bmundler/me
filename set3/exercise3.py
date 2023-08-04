@@ -30,13 +30,18 @@ def advancedGuessingGame():
     """
     print("\nWelcome to Brian's Guessing Game!")
 
+    # Defining messages
+    message_notint = "Not a number, try again."
+    message_low = "Too small, try again :'("
+    message_high = "Too big, try again :'("
+
     # Defining the first number
     while True:
         try:
             lowerBound = int(input("Enter a lower bound: "))
             break
         except ValueError:
-            print("Not a number, try again.")
+            print(message_notint)
 
     # Defining the second number
     while True:
@@ -45,11 +50,11 @@ def advancedGuessingGame():
                 input("Now enter a number higher than " + str(lowerBound) + ": ")
             )
             if upperBound <= lowerBound:
-                print("Too low")
+                print(message_low)
             else:
                 break
         except ValueError:
-            print("Not a number, try again.")
+            print(message_notint)
 
     # Guessing game starts here
     actualNumber = random.randint(lowerBound, upperBound)
@@ -58,17 +63,17 @@ def advancedGuessingGame():
 
     while not guessed:
         try:
-            guessedNumber = int(input("Guess a number: "))
+            guessedNumber = int(input("Guess a number between " + str(lowerBound) + " and " + str(upperBound) + ": "))
             print(f"You guessed {guessedNumber},")
             if guessedNumber == actualNumber:
                 print(f"You got it!! It was {actualNumber}")
                 guessed = True
             elif guessedNumber < actualNumber:
-                print("Too small, try again :'(")
+                print(message_low)
             else:
-                print("Too big, try again :'(")
+                print(message_high)
         except ValueError:
-            print("Not a number, try again.")
+            print(message_notint)
     return "You got it!"
 
     # the tests are looking for the exact string "You got it!". Don't modify that!
