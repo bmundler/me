@@ -67,9 +67,10 @@ def stubborn_asker(low, high):
                 print("Too high >:(")
             else:
                 print("Nice, keep going!")
-                break
+                return result
         except ValueError:
             print("That's a letter, duh")
+
 
 
 def not_number_rejector(message):
@@ -105,9 +106,10 @@ def super_asker(low, high):
                 print("Too high >:(")
             else:
                 print("Well done, amigo.")
-                break
+                return result
         except ValueError:
             print("...a NUMBER, like 123")
+            
 
 
 if __name__ == "__main__":
