@@ -24,8 +24,53 @@ def binary_search(low, high, actual_number):
     tries = 0
     guess = 0
 
-    # Write your code in here
+    print("\nWelcome to Brian's First Algorithm!")
 
+    # Defining messages
+    message_notint = "Not a number, try again."
+    message_low = "Too small, try again :'("
+    message_high = "Too big, try again :'("
+
+    # # Defining the first number
+    # while True:
+    #     try:
+    #         low = int(input("Enter a lower bound: "))
+    #         break
+    #     except ValueError:
+    #         print(message_notint)
+
+    # # Defining the second number
+    # while True:
+    #     try:
+    #         high = int(
+    #             input("Now enter a number higher than " + str(low) + ": ")
+    #         )
+    #         if high <= low:
+    #             print(message_low)
+    #         else:
+    #             break
+    #     except ValueError:
+    #         print(message_notint)
+
+    # Guessing game starts here
+    while True:
+        try:
+            guess = int((high - low)/2 + low)
+            print(f"You guessed {guess},")
+            if guess == actual_number:
+                tries = tries + 1
+                print(f"You got it!! It was {guess}. It took you {tries} tries to guess it.")
+                break
+            elif guess < actual_number:
+                tries = tries + 1
+                print(message_low)
+                low = guess
+            else:
+                tries = tries + 1
+                print(message_high)
+                high = guess
+        except ValueError:
+            print(message_notint)
     return {"guess": guess, "tries": tries}
 
 
