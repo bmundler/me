@@ -66,7 +66,7 @@ def advancedGuessingGame():
             guessedNumber = int(input("Guess a number between " + str(lowerBound) + " and " + str(upperBound) + ": "))
             print(f"You guessed {guessedNumber},")
             if guessedNumber == actualNumber:
-                print(f"You got it!! It was {actualNumber}")
+                print(f"It was {actualNumber}!")
                 guessed = True
             elif guessedNumber < actualNumber:
                 print(message_low)
