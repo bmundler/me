@@ -55,11 +55,13 @@ def binary_search(low, high, actual_number):
     # Guessing game starts here
     while True:
         try:
-            guess = int((high - low)/2 + low)
+            guess = int((high - low) / 2 + low)
             print(f"You guessed {guess},")
             if guess == actual_number:
                 tries = tries + 1
-                print(f"You got it!! It was {guess}. It took you {tries} tries to guess it.")
+                print(
+                    f"You got it!! It was {guess}. It took you {tries} tries to guess it."
+                )
                 return {"guess": guess, "tries": tries}
             elif guess < actual_number:
                 tries = tries + 1
