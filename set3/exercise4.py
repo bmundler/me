@@ -60,18 +60,17 @@ def binary_search(low, high, actual_number):
             if guess == actual_number:
                 tries = tries + 1
                 print(f"You got it!! It was {guess}. It took you {tries} tries to guess it.")
-                break
+                return {"guess": guess, "tries": tries}
             elif guess < actual_number:
                 tries = tries + 1
                 print(message_low)
-                low = guess
+                low = guess + 1
             else:
                 tries = tries + 1
                 print(message_high)
-                high = guess
+                high = guess - 1
         except ValueError:
             print(message_notint)
-    return {"guess": guess, "tries": tries}
 
 
 if __name__ == "__main__":
