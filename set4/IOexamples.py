@@ -57,9 +57,15 @@ def who_is_cool(file_path):
     print(message + response)
     history_book.close()
 
+def who_is_safe(file_path):
+    with open(file_path, "r", encoding="utf-8") as history_book:
+        response = history_book.read()
+    message = "historians have recorded that:\n\t"
+    print(message + response)
+
 
 who_is_cool("../ben_is_cool.txt")
-who_is_cool("Set4/lazyduck.json")
+who_is_cool("set4/lazyduck.json")
 
 
 # some JSON examples:

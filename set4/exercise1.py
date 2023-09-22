@@ -79,6 +79,12 @@ def wordy_pyramid():
     """
     pyramid = []
 
+    id = 20
+    url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={id}"
+    r = requests.get(url)
+    if r.status_code is 200:
+        word = r.text
+
     return pyramid
 
 
