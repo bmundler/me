@@ -93,7 +93,7 @@ def wordy_pyramid():
             word = r.text
             pyramid.append(word)
 
-    for id in range(21, 4, -2):
+    for id in range(20, 3, -2):
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={id}"
         r = requests.get(url)
         if r.status_code is 200:
