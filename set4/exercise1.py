@@ -159,6 +159,17 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
+
+    with open(
+        "/workspaces/me/set4/Trispokedovetiles(laser).gcode", "r", encoding="utf-8"
+    ) as laser_log:
+        response = laser_log.read()
+
+    laser_on_and_off = str(response.count("M10 P1"))
+
+    with open("/workspaces/me/set4/lasers.pew", "w", encoding="utf-8") as laser_book:
+        laser_book.write(laser_on_and_off)
+
     pass
 
 
